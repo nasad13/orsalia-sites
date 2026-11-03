@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="el">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Ενδεικτικό template ιστοσελίδας ψυχολόγου — Τερακότα.">
+    <title>Ορσαλία | Τερακότα</title>
+    <style>
+/* CSS: εδώ αλλάζεις την εμφάνιση της σελίδας. */
+/* Χρώματα: --bg φόντο, --ink κείμενο, --accent έμφαση, --panel πλαίσια. */
+* {
+  box-sizing:border-box
+}
+
+html {
+  scroll-behavior:smooth;
+  scroll-padding-top:30px
+}
+
+body {
+  margin:0;
+  color:var(--ink);
+  background:var(--bg);
+  font:16px/1.7 Arial,sans-serif
+}
+
+a {
+  color:inherit;
+  text-decoration:none
+}
+
+a:focus-visible,summary:focus-visible {
+  outline:3px solid var(--accent);
+  outline-offset:5px
+}
+
+.wrap {
+  max-width:1240px;
+  margin:auto;
+  padding:0 6%
+}
+
+header {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+  padding:28px 0;
+  border-bottom:1px solid var(--line)
+}
+
+.brand {
+  font:27px Georgia,serif
+}
+
+.brand small {
+  display:block;
+  font:10px Arial;
+  letter-spacing:3px;
+  margin-top:8px
+}
+
+nav {
+  display:flex;
+  gap:28px;
+  font-size:13px
+}
+
+.button {
+  display:inline-block;
+  background:var(--ink);
+  color:var(--bg);
+  padding:15px 25px;
+  border-radius:3px;
+  font-size:14px
+}
+
+.eyebrow {
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:11px;
+  font-weight:bold
+}
+
+h1,h2,h3 {
+  font-family:Georgia,serif;
+  font-weight:400;
+  line-height:1.13
+}
+
+h1 {
+  font-size:clamp(44px,5.9vw,84px);
+  letter-spacing:-2px;
+  margin:25px 0
+}
+
+h2 {
+  font-size:clamp(33px,4vw,49px);
+  margin:15px 0 30px
+}
+
+h3 {
+  font-size:25px
+}
+
+p {
+  max-width:560px
+}
+
+.lead {
+  font-size:17px;
+  opacity:.8;
+  margin-bottom:32px
+}
+
+.hero {
+  padding:65px 0 75px;
+  display:grid;
+  grid-template-columns:1.05fr 1fr;
+  align-items:center;
+  gap:65px
+}
+
+.art {
+  width:100%;
+  display:block
+}
+
+.caption {
+  font-size:11px;
+  letter-spacing:1px;
+  margin-top:15px;
+  display:flex;
+  justify-content:space-between
+}
+
+.section {
+  padding:80px 0;
+  border-top:1px solid var(--line)
+}
+
+.split {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px
+}
+
+.services {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+  margin-top:40px
+}
+
+.service {
+  padding:27px 0;
+  border-top:1px solid var(--ink)
+}
+
+.service span {
+  font-size:12px;
+  opacity:.65
+}
+
+.service p {
+  font-size:14px;
+  opacity:.8
+}
+
+.about-text {
+  font-size:19px
+}
+
+.faq {
+  max-width:800px;
+  margin-left:auto
+}
+
+details {
+  border-bottom:1px solid var(--line);
+  padding:22px 0
+}
+
+summary {
+  cursor:pointer;
+  font-size:17px
+}
+
+details p {
+  font-size:14px;
+  opacity:.8
+}
+
+.contact {
+  padding:55px;
+  background:var(--panel);
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:45px
+}
+
+.contact p {
+  font-size:14px
+}
+
+.contact .button {
+  margin-top:15px
+}
+
+footer {
+  padding:28px 0;
+  display:flex;
+  justify-content:space-between;
+  gap:25px;
+  font-size:11px;
+  opacity:.8
+}
+
+.demo {
+  font-size:11px;
+  padding:9px 15px;
+  background:var(--panel);
+  text-align:center
+}
+
+.text-link {
+  display:inline-block;
+  border-bottom:1px solid;
+  margin-top:20px;
+  font-size:14px
+}
+
+.note {
+  font-size:12px;
+  opacity:.75
+}
+
+@media(max-width:760px) {
+  header {
+    align-items:flex-start
+  }
+
+  nav {
+    gap:12px;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+    max-width:180px
+  }
+
+  nav a {
+    font-size:12px
+  }
+
+  .hero,.split,.contact {
+    grid-template-columns:1fr;
+    gap:30px
+  }
+
+  .hero {
+    padding:40px 0
+  }
+
+  .hero h1 {
+    letter-spacing:-1px
+  }
+
+  .services {
+    grid-template-columns:1fr;
+    gap:10px
+  }
+
+  .section {
+    padding:50px 0
+  }
+
+  .contact {
+    padding:30px
+  }
+
+  .brand {
+    font-size:23px
+  }
+
+  footer {
+    flex-direction:column
+  }
+
+  .wrap {
+    padding:0 6%
+  }
+
+}
+
+@media(prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior:auto
+  }
+
+}
+
+body {
+  --bg:#f2e9dc;
+  --ink:#382e29;
+  --accent:#a64d32;
+  --panel:#e5d5c2;
+  --line:#d4c4b2
+}
+
+.hero {
+  grid-template-columns:1.15fr 1fr
+}
+
+.hero figure {
+  margin:0;
+  transform:rotate(-3deg)
+}
+
+h1 {
+  font-size:clamp(46px,5.6vw,78px)
+}
+
+h1 em {
+  color:#a64d32
+}
+
+.button {
+  background:#a64d32;
+  color:white
+}
+
+.services {
+  grid-template-columns:1fr
+}
+
+.service {
+  display:grid;
+  grid-template-columns:45px 1fr 1.2fr;
+  gap:20px;
+  align-items:baseline
+}
+
+.service h3 {
+  margin:15px 0
+}
+
+.contact {
+  background:#382e29;
+  color:#f2e9dc
+}
+
+.contact .button {
+  background:#f2e9dc;
+  color:#382e29
+}
+
+@media(max-width:760px) {
+  .hero {
+    grid-template-columns:1fr
+  }
+
+  .hero figure {
+    transform:none
+  }
+
+  .service {
+    grid-template-columns:30px 1fr
+  }
+
+  .service p {
+    grid-column:2
+  }
+
+}
+
+    </style>
+</head>
+<body>
+  <div class="demo">Πρόταση σχεδιασμού · Ενδεικτικά κείμενα και στοιχεία προς συμπλήρωση
+  </div>
+  <div class="wrap">
+
+    <!-- ΚΕΦΑΛΙΔΑ: όνομα και μενού πλοήγησης -->
+    <header><a class="brand" href="#home">Ορσαλία<span aria-hidden="true">.</span><small>ΨΥΧΟΛΟΓΟΣ</small></a>
+      <nav aria-label="Κύρια πλοήγηση"><a href="#about">Γνωριμία</a><a href="#services">Υποστήριξη</a><a href="#contact">Επικοινωνία ↗</a>
+      </nav>
+    </header>
+
+    <!-- ΚΥΡΙΟ ΠΕΡΙΕΧΟΜΕΝΟ -->
+    <main id="home">
+
+      <!-- ΑΡΧΙΚΗ ΕΝΟΤΗΤΑ: κεντρικός τίτλος, εισαγωγή και γραφικό -->
+      <section class="hero">
+        <div><span class="eyebrow">Ας ξεκινήσουμε από εσένα</span>
+          <h1>Δεν χρειάζεται να<br>τα έχεις όλα<br><em>ξεκαθαρίσει.</em></h1>
+          <p class="lead">Μερικές φορές, το πρώτο βήμα είναι απλώς μια συζήτηση. Ένας χρόνος αφιερωμένος σε σένα, στις σκέψεις σου και σε όσα δυσκολεύεσαι να βάλεις σε λέξεις.</p>
+          <a class="button" href="#contact">Ας γνωριστούμε ↗</a>
+          <p class="note">Ένα πρώτο βήμα, στον δικό σου χρόνο.</p>
+        </div>
+        <figure>
+          <svg class="art" viewBox="0 0 600 510" role="img" aria-label="Γλυπτική σύνθεση κύκλων και τόξων"><rect width="600" height="510" fill="#dad1c5"/><path d="M110 420V210a135 135 0 0 1 270 0v210" fill="#b86144"/><path d="M178 420V216a67 67 0 0 1 134 0v204" fill="#e9dfd2"/><ellipse cx="380" cy="430" rx="130" ry="20" fill="#c4b6a4"/><circle cx="400" cy="330" r="90" fill="#eedfc3"/><path d="M400 240a90 90 0 0 1 0 180Z" fill="#d4bd99"/><path d="M50 450h500" stroke="#9a8d7d"/>
+          </svg>
+          <figcaption class="caption"><span>ΧΩΡΟΣ ΓΙΑ ΕΣΕΝΑ</span><span>01 — ΜΙΑ ΑΡΧΗ</span>
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- ΓΝΩΡΙΜΙΑ: βιογραφικό και θεραπευτική προσέγγιση -->
+      <section class="section split" id="about">
+        <div><span class="eyebrow">Η γνωριμία μας</span>
+          <h2>Πίσω από κάθε σκέψη,<br>υπάρχει μια ιστορία.</h2>
+        </div>
+        <div>
+          <p class="about-text">Η θεραπευτική σχέση χτίζεται μέσα από την αποδοχή, τη συνεργασία και τον σεβασμό στη μοναδικότητα κάθε ανθρώπου.</p>
+          <p>Εδώ θα προστεθούν το βιογραφικό της Ορσαλίας, οι σπουδές, η άδεια άσκησης επαγγέλματος και η θεραπευτική προσέγγιση, σύμφωνα με τα πραγματικά της στοιχεία.</p>
+          <a class="text-link" href="#faq">Πώς γίνεται η πρώτη συνάντηση ↓</a>
+        </div>
+      </section>
+
+      <!-- ΥΠΗΡΕΣΙΕΣ: τίτλοι και περιγραφές -->
+      <section class="section" id="services"><span class="eyebrow">Πώς μπορώ να σε υποστηρίξω</span>
+        <h2>Αυτό που σε απασχολεί,<br>αξίζει να ακουστεί.</h2>
+        <p>Ενδεικτικές θεματικές παρουσίασης. Οι υπηρεσίες θα προσαρμοστούν στην πραγματική εκπαίδευση και το πεδίο εργασίας της ψυχολόγου.</p>
+        <div class="services">
+          <article class="service"><span>01 /</span>
+            <h3>Άγχος & καθημερινότητα</h3>
+            <p>Χώρος για τις πιέσεις, τις ανησυχίες και τις απαιτήσεις που δυσκολεύουν την καθημερινή ζωή.</p>
+          </article>
+          <article class="service"><span>02 /</span>
+            <h3>Σχέσεις & όρια</h3>
+            <p>Διερεύνηση του τρόπου που συνδέεσαι με τους άλλους και εκφράζεις τις ανάγκες σου.</p>
+          </article>
+          <article class="service"><span>03 /</span>
+            <h3>Αυτογνωσία & αλλαγές</h3>
+            <p>Κατανόηση του εαυτού σου σε περιόδους μετάβασης, αποφάσεων και προσωπικής αναζήτησης.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ΣΥΧΝΕΣ ΕΡΩΤΗΣΕΙΣ: πάτησε κάθε ερώτηση για την απάντηση -->
+      <section class="section split" id="faq">
+        <div><span class="eyebrow">Πριν την πρώτη συνάντηση</span>
+          <h2>Μερικές απαντήσεις,<br>για την αρχή.</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Χρειάζεται να ξέρω τι θα πω;</summary>
+            <p>Δεν χρειάζεται να έχεις οργανώσει τις σκέψεις σου. Η πρώτη συζήτηση μπορεί να ξεκινήσει από αυτό που σε έφερε εδώ και από τις απορίες σου για τη διαδικασία.</p>
+          </details>
+          <details>
+            <summary>Υπάρχει δυνατότητα online συνεδρίας;</summary>
+            <p>Η διαθεσιμότητα online συνεδριών και οι σχετικές λεπτομέρειες θα επιβεβαιώνονται κατά την επικοινωνία.</p>
+          </details>
+          <details>
+            <summary>Ποια είναι η διάρκεια και το κόστος;</summary>
+            <p>Η διάρκεια, το κόστος και η πολιτική ακύρωσης θα συμπληρωθούν εδώ αφού οριστούν από την επαγγελματία.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- ΕΠΙΚΟΙΝΩΝΙΑ: άλλαξε εδώ email, τηλέφωνο και διεύθυνση -->
+      <section class="section" id="contact">
+        <div class="contact">
+          <div><span class="eyebrow">Επικοινωνία</span>
+            <h2>Ας κάνουμε<br>την αρχή.</h2>
+            <p>Για πληροφορίες ή για μια πρώτη συνάντηση, επικοινώνησε με τον τρόπο που σε εξυπηρετεί.</p>
+          </div>
+          <div>
+            <p><strong>Email</strong><br>[Το επαγγελματικό email σου]</p>
+            <p><strong>Τηλέφωνο</strong><br>[Το τηλέφωνό σου]</p>
+            <p><strong>Χώρος συνεδριών</strong><br>[Διεύθυνση γραφείου · Περιοχή]</p>
+            <p class="note">Τα στοιχεία επικοινωνίας είναι placeholders και θα αντικατασταθούν πριν από τη δημοσίευση.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer><span>Ορσαλία · Ψυχολόγος</span><span>Template Τερακότα · Ενδεικτική παρουσίαση</span><a href="#home">Στην αρχή ↑</a>
+    </footer>
+  </div>
+</body>
+</html>
