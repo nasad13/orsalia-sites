@@ -317,7 +317,29 @@ h1 em {
 .contact {
   border-radius:8px
 }
+      
+/* Μενού σε κινητό */
+@media (max-width: 760px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
 
+  nav {
+    width: 100%;
+    max-width: none;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+
+  nav a {
+    font-size: 13px;
+    white-space: nowrap;
+  }
+}
     </style>
 </head>
 <body>
